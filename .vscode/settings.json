@@ -1,0 +1,14 @@
+{
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+  "chat.promptFiles": true,
+  "chat.agent.enabled": true,
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.chat.reviewSelection.enabled": true
+}

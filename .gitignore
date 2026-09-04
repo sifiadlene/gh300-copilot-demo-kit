@@ -1,0 +1,27 @@
+# Python and uv
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Local demo data and generated output
+*.db
+*.sqlite
+*.sqlite3
+backups/
+coverage/
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Downloaded Windows metadata
+*:Zone.Identifier

@@ -1,0 +1,27 @@
+[project]
+name = "gh300-copilot-demo-kit"
+version = "0.1.0"
+description = "Validation tooling for an exhaustive GH-300 GitHub Copilot demo kit"
+requires-python = ">=3.11"
+dependencies = []
+
+[dependency-groups]
+dev = [
+  "ipykernel>=6.30.1",
+  "ipywidgets>=8.1.7",
+  "pytest>=8.4.2",
+  "ruff>=0.12.12",
+  "tqdm>=4.67.1",
+]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

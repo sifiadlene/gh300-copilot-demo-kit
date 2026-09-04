@@ -1,0 +1,22 @@
+# Sample content exclusion configuration.
+# In practice this is entered in the GitHub UI:
+#   Repository:   Settings > Copilot > Content exclusion
+#   Organization: Organization settings > Copilot > Content exclusion
+# Shown here as a file purely so the demo audience can read the syntax.
+
+# Paths excluded for every repository in the organization
+"*":
+  - "/**/.env"
+  - "/**/*.pem"
+  - "/**/secrets/**"
+
+# Paths excluded for one specific repository
+"https://github.com/CONTOSO/payments-service":
+  - "/src/billing/keys/**"
+  - "/config/production.yaml"
+
+# Notes for the demo:
+# - Exclusions block inline suggestions AND chat context for the matched files.
+# - Changes can take up to ~30 minutes to propagate, or reload the window to force a refresh.
+# - Exclusions are enforced for Copilot in IDEs and, where supported, on github.com.
+# - Exclusions do NOT retroactively remove anything already suggested or committed.
