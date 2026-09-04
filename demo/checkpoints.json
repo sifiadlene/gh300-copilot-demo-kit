@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "scenarios": {
+    "starter": {
+      "description": "Restore both intentionally defective starter modules.",
+      "ref": "demo/baseline-2026-08",
+      "commit": "83b24a96ad902f045f4bb48c9272de2190644258",
+      "restorePaths": [
+        "src/cart.js",
+        "src/inventory_legacy.py"
+      ],
+      "generatedPaths": [
+        "backups",
+        "tests/cart.test.js",
+        "tests/test_inventory_legacy.py"
+      ]
+    },
+    "javascript": {
+      "description": "Restore the shopping-cart demonstration only.",
+      "ref": "demo/baseline-2026-08",
+      "commit": "83b24a96ad902f045f4bb48c9272de2190644258",
+      "restorePaths": [
+        "src/cart.js"
+      ],
+      "generatedPaths": [
+        "tests/cart.test.js"
+      ]
+    },
+    "python": {
+      "description": "Restore the legacy inventory demonstration only.",
+      "ref": "demo/baseline-2026-08",
+      "commit": "83b24a96ad902f045f4bb48c9272de2190644258",
+      "restorePaths": [
+        "src/inventory_legacy.py"
+      ],
+      "generatedPaths": [
+        "tests/test_inventory_legacy.py"
+      ]
+    }
+  }
+}

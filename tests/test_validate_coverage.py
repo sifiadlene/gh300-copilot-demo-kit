@@ -1,3 +1,5 @@
+# Copyright (c) Microsoft Corporation.
+# SPDX-License-Identifier: MIT
 """Tests for the GH-300 coverage matrix validator."""
 
 from __future__ import annotations

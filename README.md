@@ -36,10 +36,31 @@ an independent checkpoint so a prior generated edit cannot affect a later lab.
 * All 41 objectives are mapped to artifacts and verification evidence
 * Responsible AI scenarios cover the previously missing 15-20% domain
 * Coverage validation has automated tests and a stale-review gate
+* The immutable starter tag and guarded reset tool isolate JavaScript and
+   Python demonstrations
 * IDE, CLI, review, agent, MCP, architecture, prompting, productivity, and
    safeguard scripts remain available below while they are split into labs
-* Git checkpoints, reset automation, fixtures, CI, and hosted-flow fallbacks
-   are the next implementation milestone
+* Fixtures, CI, presenter guidance, and hosted-flow fallbacks are the next
+   implementation milestone
+
+## Reset a demonstration
+
+Inspect a reset before changing files:
+
+```bash
+scripts/demo-reset.sh --dry-run javascript
+```
+
+After reviewing the allowlist, restore the scenario:
+
+```bash
+scripts/demo-reset.sh javascript
+```
+
+Use `python`, `javascript`, or `starter`. The command refuses to run if the
+working tree contains changes outside that scenario's allowlist. See the
+[checkpoint guide](docs/demo-checkpoints.md) before creating or replacing
+checkpoint tags.
 
 ---
 
